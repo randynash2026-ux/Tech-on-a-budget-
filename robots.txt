@@ -1,0 +1,36 @@
+# robots.txt for Tech on a Budget
+# This file helps search engines understand how to crawl and index your website
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /*.pdf$
+Disallow: /*.zip$
+
+# Specify crawl delay (delay in seconds between requests)
+Crawl-delay: 1
+
+# Specific rules for Google Bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: DotBot
+User-agent: MJ12bot
+Disallow: /
+
+# Link to sitemap
+Sitemap: https://randynash2026-ux.github.io/Tech-on-a-budget-/sitemap.xml
+
+# Specify the location of your robots.txt file
+# This helps search engines find it more easily
