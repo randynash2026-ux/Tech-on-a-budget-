@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech on a Budget - Find the Best Deals on Tech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 1rem 0;
+            border-bottom: 1px solid #dee2e6;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .categories {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .categories h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .category-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #667eea;
+        }
+
+        .category-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .features {
+            padding: 4rem 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            padding: 2rem;
+            background: white;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .feature-item p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>💰 Tech on a Budget</h1>
+            <p class="tagline">Find the latest tech worth buying — without overpaying</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#deals">Deals</a></li>
+                <li><a href="#tips">Money-Saving Tips</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Smart Shopping Starts Here</h2>
+            <p>We help you buy the best tech for less. From refurbished deals and open-box finds to smart financing and price-tracking tips.</p>
+            <a href="#categories" class="btn">Explore Products</a>
+        </div>
+    </section>
+
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon">📱</div>
+                    <h3>Phones</h3>
+                    <p>Latest smartphones at the best prices. Compare deals and find the perfect match.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">💻</div>
+                    <h3>Laptops</h3>
+                    <p>Powerful computers for work, gaming, and everything in between.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🚁</div>
+                    <h3>Drones</h3>
+                    <p>Quality drones for photography and adventure at budget-friendly prices.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">📲</div>
+                    <h3>Tablets</h3>
+                    <p>Great tablets for entertainment and productivity without breaking the bank.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎧</div>
+                    <h3>Accessories</h3>
+                    <p>Cases, chargers, headphones, and more to complete your tech setup.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🔌</div>
+                    <h3>Smart Devices</h3>
+                    <p>Smart home gadgets and IoT devices that add convenience to your life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="tips">
+        <div class="container">
+            <h2>Why Choose Tech on a Budget?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>💯 Best Prices Guaranteed</h3>
+                    <p>We compare prices across retailers and help you find the absolute lowest price for any tech product.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🔄 Refurbished & Open-Box Deals</h3>
+                    <p>Discover quality refurbished and open-box items that are almost new but cost significantly less.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>💳 Smart Financing Options</h3>
+                    <p>Learn about payment plans and financing options that make tech more affordable.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>📊 Real Reviews & Comparisons</h3>
+                    <p>Honest reviews and side-by-side comparisons help you make the right choice.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>📈 Price Tracking Tips</h3>
+                    <p>Get expert tips on when to buy and how to track prices for the best deals.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🎁 Exclusive Deals</h3>
+                    <p>Access to exclusive promotions and limited-time offers you won't find anywhere else.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="deals" style="padding: 4rem 0; text-align: center; background: #f8f9fa;">
+        <div class="container">
+            <h2 style="font-size: 2rem; margin-bottom: 2rem;">Featured Deals</h2>
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+                📢 Subscribe to our newsletter to get notified about the latest deals and money-saving tips!
+            </p>
+            <input type="email" placeholder="Enter your email" style="padding: 0.8rem; width: 100%; max-width: 400px; border: 1px solid #ddd; border-radius: 5px; margin-right: 0.5rem;">
+            <button class="btn" style="display: inline-block; margin-top: 1rem;">Subscribe</button>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2026 Tech on a Budget. All rights reserved.</p>
+            <p>📧 Contact: info@techonabud.com | 🌐 Follow us on social media</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Made with ❤️ to help you save money on tech</p>
+        </div>
+    </footer>
+</body>
+</html>
